@@ -1,12 +1,11 @@
-import { Component, signal } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { Component } from '@angular/core';
+import { Saludo } from './saludo/saludo';
+import { MiComponente01 } from './mi-componente01/mi-componente01';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
+  imports: [Saludo, MiComponente01],
   templateUrl: './app.html',
-  styleUrl: './app.css'
+  styleUrl: './app.css',
 })
-export class App {
-  protected readonly title = signal('cursoangular');
-}
+export class App {}
