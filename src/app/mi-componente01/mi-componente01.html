@@ -1,5 +1,13 @@
 <div>
   <h2>{{ titulo }}</h2>
   <p>Hola {{ nombre }}</p>
-  <button [disabled]="deshabilitar">Saludar</button>
+  <button [disabled]="deshabilitar" (click)="clickSaludar()">Saludar</button>
+  <br />
+  <br />
+  <input type="text" (input)="eventoInput($event)" />
+  <p>{{ inputMessage }}</p>
+
+  <label for="">Ingrese un nombre: </label>
+  <input type="text" [(ngModel)]="inputNombre" />
+  <p>{{ inputNombre }}</p>
 </div>
