@@ -59,4 +59,24 @@
   } @default {
   <p>Estado no reconocido</p>
   } }
+
+  <h3>Control Flow - @_for</h3>
+  <table>
+    <tr>
+      <th>ID</th>
+      <th>NOMBRE</th>
+      <th>ESTADO</th>
+      <th>PRIORIDAD</th>
+      <th>VENCIMIENTO</th>
+    </tr>
+    @for(tarea of tareaArray; track tarea.id) {
+    <tr>
+      <td>{{ tarea.id }}</td>
+      <td>{{ tarea.nombre }}</td>
+      <td>{{ tarea.estado }}</td>
+      <td>{{ tarea.prioridad }}</td>
+      <td>{{ tarea.fechaVencimiento }}</td>
+    </tr>
+    }
+  </table>
 </div>
