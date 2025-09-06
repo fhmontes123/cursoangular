@@ -1,0 +1,50 @@
+<div style="background: #ffdfe9">
+  <h2>Mi Componente 04</h2>
+  <table>
+    <tr>
+      <th>PIPE</th>
+      <th>VALUE</th>
+      <th>RESULT</th>
+    </tr>
+    <tr>
+      <td>UpperCase</td>
+      <td>{{ nombreCompleto }}</td>
+      <td>{{ nombreCompleto | uppercase }}</td>
+    </tr>
+    <tr>
+      <td>LowerCase</td>
+      <td>{{ nombreCompleto }}</td>
+      <td>{{ nombreCompleto | lowercase }}</td>
+    </tr>
+    <tr>
+      <td>Slice</td>
+      <td>{{ nombreCompleto }}</td>
+      <td>{{ nombreCompleto | slice : 5 }}</td>
+    </tr>
+    <tr>
+      <td>Slice</td>
+      <td>{{ nombreCompleto }}</td>
+      <td>{{ nombreCompleto | slice : 5 : 11 }}</td>
+    </tr>
+    <tr>
+      <td>Decimal Simple</td>
+      <td>{{ sueldo }}</td>
+      <td>{{ sueldo | number }}</td>
+    </tr>
+    <tr>
+      <td>Decimal Custom</td>
+      <td>{{ sueldo }}</td>
+      <td>{{ sueldo | number : '1.2-5' }}</td>
+    </tr>
+    <tr>
+      <td>Percent</td>
+      <td>{{ avancePorcentaje }}</td>
+      <td>{{ avancePorcentaje | percent }}</td>
+    </tr>
+    <tr>
+      <td>Currency</td>
+      <td>{{ sueldo }}</td>
+      <td>{{ sueldo | currency : 'BOB' }}</td>
+    </tr>
+  </table>
+</div>
