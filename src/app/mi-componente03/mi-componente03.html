@@ -1,0 +1,33 @@
+<div style="background: #ccffdb">
+  <h2>Mi Componente 03</h2>
+  <h3>Directiva de Atributo - NgClass</h3>
+  <div
+    [ngClass]="{
+    active: isActive,
+    error: hasError,
+    disabled: status === 'COMPLETED',
+  }"
+  >
+    Este div cambia de clases dinamicamente.
+  </div>
+
+  <button (click)="toggleActive()">Toogle Active</button>
+  <button (click)="toggleError()">Toogle Error</button>
+  <button (click)="toggleStatus()">Change Status</button>
+
+  <h3>Directiva de Atributo - NgStyle</h3>
+  <div
+    [ngStyle]="{
+        color: textColor,
+        'font-size.px': fontSize,
+        'background-color': bgColor,
+        'padding.px': paddingSize,
+    }"
+  >
+    Este div cambia de estilos dinamicamente.
+  </div>
+  <button (click)="changeColor('blue')">Blue Text</button>
+  <button (click)="changeColor('red')">Red Text</button>
+  <button (click)="changeColor('green')">Green Text</button>
+  <button (click)="increaseSize()">Increase Font</button>
+</div>

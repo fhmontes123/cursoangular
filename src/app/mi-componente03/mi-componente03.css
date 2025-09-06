@@ -1,0 +1,34 @@
+/* styles.css */
+.active {
+  background-color: green;
+  color: white;
+  padding: 10px;
+}
+
+.error {
+  border: 2px solid red;
+  background-color: #f19191;
+}
+
+.disabled {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+/* Estilo de tabla */
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  padding: 10px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+th {
+  background-color: #f8f9fa;
+  font-weight: bold;
+}
