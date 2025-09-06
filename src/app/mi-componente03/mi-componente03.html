@@ -30,4 +30,33 @@
   <button (click)="changeColor('red')">Red Text</button>
   <button (click)="changeColor('green')">Green Text</button>
   <button (click)="increaseSize()">Increase Font</button>
+
+  <h3>Control Flow - @_if</h3>
+  <button (click)="toggleStatus()">Change Status</button>
+  @if(status === 'COMPLETED') {
+  <div>
+    <app-saludo />
+  </div>
+  }
+
+  <h3>Control Flow - @_if - else-if</h3>
+  <p>Nota: {{ score }}</p>
+  @if( score >= 90){
+  <p>Observacion: Excelente</p>
+  } @else if (score >= 80 && score < 90) {
+  <p>Observacion: Bueno</p>
+  } @else if (score >= 70 && score < 80) {
+  <p>Observacion: Regular</p>
+  } @else {
+  <p>Observacion: Malo</p>
+  }
+
+  <h3>Control Flow - @_switch</h3>
+  @switch (status) { @case ('COMPLETED') {
+  <p>Completado con exito.</p>
+  } @case ('PENDING') {
+  <p>Pendiente</p>
+  } @default {
+  <p>Estado no reconocido</p>
+  } }
 </div>

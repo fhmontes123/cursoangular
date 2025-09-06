@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-saludo',
@@ -16,4 +16,16 @@ import { Component } from '@angular/core';
     h2 { color: white}
   `,
 })
-export class Saludo {}
+export class Saludo implements OnInit, OnDestroy {
+  constructor() {
+    console.log('Componente Saludo > constructor()');
+  }
+
+  ngOnInit(): void {
+    console.log('Componente Saludo > ngOnInit()');
+  }
+
+  ngOnDestroy(): void {
+    console.log('Componente Saludo > ngOnDestroy()');
+  }
+}

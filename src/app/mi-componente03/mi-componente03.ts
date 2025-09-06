@@ -1,9 +1,10 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
+import { Saludo } from '../saludo/saludo';
 
 @Component({
   selector: 'app-mi-componente03',
-  imports: [CommonModule], // <-  ngClass / ngStyle
+  imports: [CommonModule, Saludo], // <-  ngClass / ngStyle
   templateUrl: './mi-componente03.html',
   styleUrl: './mi-componente03.css',
 })
@@ -16,6 +17,8 @@ export class MiComponente03 {
   fontSize = 16;
   bgColor = '#f0f0f0';
   paddingSize = 10;
+
+  score = 75;
 
   toggleActive() {
     this.isActive = !this.isActive;
