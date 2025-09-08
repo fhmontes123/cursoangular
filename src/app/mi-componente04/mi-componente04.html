@@ -46,5 +46,40 @@
       <td>{{ sueldo }}</td>
       <td>{{ sueldo | currency : 'BOB' }}</td>
     </tr>
+    <tr>
+      <td>Json</td>
+      <td>{{ domicilio }}</td>
+      <td>{{ domicilio | json }}</td>
+    </tr>
+    <tr>
+      <td>Async</td>
+      <td>{{ myPromise }}</td>
+      <td>{{ myPromise | async }}</td>
+    </tr>
+    <tr>
+      <td>Date</td>
+      <td>{{ myDate }}</td>
+      <td>{{ myDate | date }}</td>
+    </tr>
+    <tr>
+      <td>Date FullDate</td>
+      <td>{{ myDate }}</td>
+      <td>{{ myDate | date : 'fullDate' }}</td>
+    </tr>
+    <tr>
+      <td>Date shortDate</td>
+      <td>{{ myDate }}</td>
+      <td>{{ myDate | date : 'shortDate' }}</td>
+    </tr>
+    <tr>
+      <td>Date Custom</td>
+      <td>{{ myDate }}</td>
+      <td>{{ myDate | date : 'dd/MM/yyyy HH:mm:ss' }}</td>
+    </tr>
+    <tr>
+      <td>Date | UpperCase</td>
+      <td>{{ myDate }}</td>
+      <td>{{ myDate | date : 'fullDate' | uppercase }}</td>
+    </tr>
   </table>
 </div>

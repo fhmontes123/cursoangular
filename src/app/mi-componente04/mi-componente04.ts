@@ -16,4 +16,11 @@ export class MiComponente04 {
   sueldo = 45675.4695;
   avancePorcentaje = 0.45;
   domicilio = { zona: 'Miraflores', calle: 'Av. America', nro: 123 };
+  myDate = new Date();
+
+  myPromise = new Promise((resolve) => {
+    setTimeout(() => {
+      resolve('Esto es una promesa');
+    }, 3000);
+  });
 }
