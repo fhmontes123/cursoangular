@@ -81,5 +81,10 @@
       <td>{{ myDate }}</td>
       <td>{{ myDate | date : 'fullDate' | uppercase }}</td>
     </tr>
+    <tr>
+      <td>Custom Age Pipe</td>
+      <td>{{ myBirthday }}</td>
+      <td>Edad {{ myBirthday | age }} años</td>
+    </tr>
   </table>
 </div>
