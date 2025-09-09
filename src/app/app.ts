@@ -1,9 +1,9 @@
 import { Component } from '@angular/core';
-import { MiComponente04 } from './mi-componente04/mi-componente04';
+import { MiComponente05 } from './mi-componente05/mi-componente05';
 
 @Component({
   selector: 'app-root',
-  imports: [MiComponente04],
+  imports: [MiComponente05],
   templateUrl: './app.html',
   styleUrl: './app.css',
 })
