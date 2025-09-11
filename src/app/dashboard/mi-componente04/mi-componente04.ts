@@ -1,7 +1,7 @@
 import { CommonModule, registerLocaleData } from '@angular/common';
 import { Component, LOCALE_ID } from '@angular/core';
 import localeEsBo from '@angular/common/locales/es-BO';
-import { AgePipe } from '../pipes/age-pipe';
+import { AgePipe } from '../../pipes/age-pipe';
 
 registerLocaleData(localeEsBo);
 

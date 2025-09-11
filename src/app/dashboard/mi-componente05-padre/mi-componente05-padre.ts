@@ -1,7 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { MiComponente05Hijo } from '../mi-componente05-hijo/mi-componente05-hijo';
-import { Usuario } from '../models/usuario.model';
+import { Usuario } from '../../models/usuario.model';
 
 @Component({
   selector: 'app-mi-componente05-padre',
