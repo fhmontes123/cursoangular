@@ -1,9 +1,9 @@
 import { Component } from '@angular/core';
-import { MiComponente07 } from './mi-componente07/mi-componente07';
+import { RouterLink, RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-root',
-  imports: [MiComponente07],
+  imports: [RouterOutlet, RouterLink],
   templateUrl: './app.html',
   styleUrl: './app.css',
 })
