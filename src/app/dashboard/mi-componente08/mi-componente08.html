@@ -5,4 +5,11 @@
   <a [routerLink]="['/dashboard/micomponente09', 'Juan', 10]">
     Ir a Componente 09 (Paso de parametros - PathaParams)
   </a>
+  <br />
+  <a
+    [routerLink]="['/dashboard/micomponente10']"
+    [queryParams]="{ param_nombre: 'Maria', param_edad: 15 }"
+  >
+    Ir a Componente 10 (Paso de parametros - QueryParams)
+  </a>
 </div>
