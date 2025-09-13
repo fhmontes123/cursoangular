@@ -1,8 +1,6 @@
 import { Routes } from '@angular/router';
 import { Saludo } from './dashboard/saludo/saludo';
 import { MiComponente01 } from './dashboard/mi-componente01/mi-componente01';
-import { MiComponente02 } from './dashboard/mi-componente02/mi-componente02';
-import { MiComponente03 } from './dashboard/mi-componente03/mi-componente03';
 import { MiComponente04 } from './dashboard/mi-componente04/mi-componente04';
 import { MiComponente05 } from './dashboard/mi-componente05/mi-componente05';
 import { MiComponente06 } from './dashboard/mi-componente06/mi-componente06';
@@ -19,8 +17,16 @@ export const routes: Routes = [
     children: [
       { path: 'saludo', component: Saludo },
       { path: 'micomponente01', component: MiComponente01 }, // dashboard/componente01/
-      { path: 'micomponente02', component: MiComponente02 }, // dashboard/componente02/
-      { path: 'micomponente03', component: MiComponente03 },
+      // { path: 'micomponente02', component: MiComponente02 }, // dashboard/componente02/
+      {
+        path: 'micomponente02',
+        loadComponent: () =>
+          import('./dashboard/mi-componente02/mi-componente02').then((c) => c.MiComponente02),
+      },
+      {
+        path: 'micomponente03',
+        loadComponent: () => import('./dashboard/mi-componente03/mi-componente03'),
+      },
       { path: 'micomponente04', component: MiComponente04 },
       { path: 'micomponente05', component: MiComponente05 },
       { path: 'micomponente06', component: MiComponente06 },

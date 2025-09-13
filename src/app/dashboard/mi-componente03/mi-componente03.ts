@@ -9,7 +9,7 @@ import { Tarea } from '../../models/tarea.model';
   templateUrl: './mi-componente03.html',
   styleUrl: './mi-componente03.css',
 })
-export class MiComponente03 implements OnInit {
+export default class MiComponente03 implements OnInit {
   isActive = false;
   hasError = false;
   status = 'PENDING';
