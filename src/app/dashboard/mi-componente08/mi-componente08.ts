@@ -17,4 +17,16 @@ export class MiComponente08 {
   navigateToComponente02(): void {
     this._router.navigateByUrl('/dashboard/micomponente02');
   }
+
+  redirectToComponente09(): void {
+    // PATHPARAMS
+    this._router.navigate(['/dashboard/micomponente09', 'Alex', 20]);
+  }
+
+  redirectToComponente10(): void {
+    // QUERYPARAMS
+    this._router.navigate(['/dashboard/micomponente10'], {
+      queryParams: { param_nombre: 'Jhon', param_edad: 25 },
+    });
+  }
 }
