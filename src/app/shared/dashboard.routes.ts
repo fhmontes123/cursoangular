@@ -16,52 +16,44 @@ export const dashboardRoutes: Routes = [
       {
         path: 'settings',
         loadChildren: () =>
-          import('../components/settings/settings.routes').then(
-            (m) => m.settingsRoutes
-          ),
+          import('../components/settings/settings.routes').then((m) => m.settingsRoutes),
       },
       {
         path: 'admin',
-        loadChildren: () =>
-          import('../components/admin/admin.routes').then((m) => m.adminRoutes),
+        loadChildren: () => import('../components/admin/admin.routes').then((m) => m.adminRoutes),
       },
       {
         path: 'user',
-        loadChildren: () =>
-          import('../components/user/user.routes').then((m) => m.userRoutes),
+        loadChildren: () => import('../components/user/user.routes').then((m) => m.userRoutes),
       },
       {
         path: 'editor',
         loadChildren: () =>
-          import('../components/editor/editor.routes').then(
-            (m) => m.editorRoutes
-          ),
+          import('../components/editor/editor.routes').then((m) => m.editorRoutes),
       },
       {
         path: 'viewer',
         loadChildren: () =>
-          import('../components/viewer/viewer.routes').then(
-            (m) => m.viewerRoutes
-          ),
+          import('../components/viewer/viewer.routes').then((m) => m.viewerRoutes),
       },
       {
         path: 'car',
-        loadChildren: () =>
-          import('../components/car/car.routes').then((m) => m.carRoutes),
+        loadChildren: () => import('../components/car/car.routes').then((m) => m.carRoutes),
       },
       {
         path: 'article',
         loadChildren: () =>
-          import('../components/article/article.routes').then(
-            (m) => m.articleRoutes
-          ),
+          import('../components/article/article.routes').then((m) => m.articleRoutes),
       },
       {
         path: 'drawer',
         loadChildren: () =>
-          import('../components/drawer/drawer.routes').then(
-            (m) => m.drawerRoutes
-          ),
+          import('../components/drawer/drawer.routes').then((m) => m.drawerRoutes),
+      },
+      {
+        path: 'practicas',
+        loadChildren: () =>
+          import('../components/practicas/practicas.routes').then((m) => m.practicasRoutes),
       },
       {
         path: '**',

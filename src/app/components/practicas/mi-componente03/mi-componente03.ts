@@ -1,7 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { Saludo } from '../saludo/saludo';
-import { Tarea } from '../../models/tarea.model';
+import { Tarea } from '../../../models/tarea.model';
 
 @Component({
   selector: 'app-mi-componente03',

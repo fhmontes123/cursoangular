@@ -1,19 +1,32 @@
 <mat-nav-list>
-  <mat-list-item routerLink="/dashboard/home" routerLinkActive="activelink" (click)="handleItemClick()" tabindex="-1">
+  <mat-list-item
+    routerLink="/dashboard/home"
+    routerLinkActive="activelink"
+    (click)="handleItemClick()"
+    tabindex="-1"
+  >
     <span class="icon-and-text">
       <mat-icon class="icon-margin">home</mat-icon>
       Home
     </span>
   </mat-list-item>
-  <mat-list-item routerLink="/dashboard/drawer/table" routerLinkActive="activelink" (click)="handleItemClick()"
-    tabindex="-1">
+  <mat-list-item
+    routerLink="/dashboard/drawer/table"
+    routerLinkActive="activelink"
+    (click)="handleItemClick()"
+    tabindex="-1"
+  >
     <span class="icon-and-text">
       <mat-icon class="icon-margin">phone</mat-icon>
       Table
     </span>
   </mat-list-item>
-  <mat-list-item routerLink="/dashboard/drawer/list" routerLinkActive="activelink" (click)="handleItemClick()"
-    tabindex="-1">
+  <mat-list-item
+    routerLink="/dashboard/drawer/list"
+    routerLinkActive="activelink"
+    (click)="handleItemClick()"
+    tabindex="-1"
+  >
     <span class="icon-and-text">
       <mat-icon class="icon-margin">list</mat-icon>
       List
@@ -27,7 +40,7 @@
         SubMenu
         <div class="expand-icon-right">
           <mat-icon class="expand-icon">
-            {{ subMenuOpen() === "components" ? "expand_less" : "expand_more" }}
+            {{ subMenuOpen() === 'components' ? 'expand_less' : 'expand_more' }}
           </mat-icon>
         </div>
       </span>
@@ -35,19 +48,152 @@
 
     @if(subMenuOpen() === 'components'){
     <div>
-      <mat-list-item routerLink="/dashboard/drawer/buttons" routerLinkActive="activelink" class="submenu-content"
-        (click)="handleItemClick()" tabindex="-1">
+      <mat-list-item
+        routerLink="/dashboard/drawer/buttons"
+        routerLinkActive="activelink"
+        class="submenu-content"
+        (click)="handleItemClick()"
+        tabindex="-1"
+      >
         <span class="icon-and-text">
           <mat-icon class="icon-margin">rss_feed</mat-icon>
           Buttons
         </span>
       </mat-list-item>
 
-      <mat-list-item routerLink="/dashboard/drawer/tabs" routerLinkActive="activelink" class="submenu-content"
-        (click)="handleItemClick()" tabindex="-1">
+      <mat-list-item
+        routerLink="/dashboard/drawer/tabs"
+        routerLinkActive="activelink"
+        class="submenu-content"
+        (click)="handleItemClick()"
+        tabindex="-1"
+      >
         <span class="icon-and-text">
           <mat-icon class="icon-margin">sentiment_satisfied_alt</mat-icon>
           Tabs
+        </span>
+      </mat-list-item>
+    </div>
+
+    }
+  </mat-nav-list>
+
+  <mat-nav-list>
+    <mat-list-item (click)="toggleSubMenu('practicas')">
+      <span class="icon-and-text">
+        <mat-icon class="icon-margin">layers</mat-icon>
+        Practicas
+        <div class="expand-icon-right">
+          <mat-icon class="expand-icon">
+            {{ subMenuOpen() === 'practicas' ? 'expand_less' : 'expand_more' }}
+          </mat-icon>
+        </div>
+      </span>
+    </mat-list-item>
+
+    @if(subMenuOpen() === 'practicas'){
+    <div>
+      <mat-list-item
+        routerLink="/dashboard/practicas/micomponente01"
+        routerLinkActive="activelink"
+        class="submenu-content"
+        (click)="handleItemClick()"
+        tabindex="-1"
+      >
+        <span class="icon-and-text">
+          <mat-icon class="icon-margin">insert_emoticon</mat-icon>
+          Mi Componente 01
+        </span>
+      </mat-list-item>
+
+      <mat-list-item
+        routerLink="/dashboard/practicas/micomponente02"
+        routerLinkActive="activelink"
+        class="submenu-content"
+        (click)="handleItemClick()"
+        tabindex="-1"
+      >
+        <span class="icon-and-text">
+          <mat-icon class="icon-margin">insert_emoticon</mat-icon>
+          Mi Componente 02
+        </span>
+      </mat-list-item>
+
+      <mat-list-item
+        routerLink="/dashboard/practicas/micomponente03"
+        routerLinkActive="activelink"
+        class="submenu-content"
+        (click)="handleItemClick()"
+        tabindex="-1"
+      >
+        <span class="icon-and-text">
+          <mat-icon class="icon-margin">insert_emoticon</mat-icon>
+          Mi Componente 03
+        </span>
+      </mat-list-item>
+
+      <mat-list-item
+        routerLink="/dashboard/practicas/micomponente04"
+        routerLinkActive="activelink"
+        class="submenu-content"
+        (click)="handleItemClick()"
+        tabindex="-1"
+      >
+        <span class="icon-and-text">
+          <mat-icon class="icon-margin">insert_emoticon</mat-icon>
+          Mi Componente 04
+        </span>
+      </mat-list-item>
+
+      <mat-list-item
+        routerLink="/dashboard/practicas/micomponente05"
+        routerLinkActive="activelink"
+        class="submenu-content"
+        (click)="handleItemClick()"
+        tabindex="-1"
+      >
+        <span class="icon-and-text">
+          <mat-icon class="icon-margin">insert_emoticon</mat-icon>
+          Mi Componente 05
+        </span>
+      </mat-list-item>
+
+      <mat-list-item
+        routerLink="/dashboard/practicas/micomponente06"
+        routerLinkActive="activelink"
+        class="submenu-content"
+        (click)="handleItemClick()"
+        tabindex="-1"
+      >
+        <span class="icon-and-text">
+          <mat-icon class="icon-margin">insert_emoticon</mat-icon>
+          Mi Componente 06
+        </span>
+      </mat-list-item>
+
+      <mat-list-item
+        routerLink="/dashboard/practicas/micomponente07"
+        routerLinkActive="activelink"
+        class="submenu-content"
+        (click)="handleItemClick()"
+        tabindex="-1"
+      >
+        <span class="icon-and-text">
+          <mat-icon class="icon-margin">insert_emoticon</mat-icon>
+          Mi Componente 07
+        </span>
+      </mat-list-item>
+
+      <mat-list-item
+        routerLink="/dashboard/practicas/micomponente08"
+        routerLinkActive="activelink"
+        class="submenu-content"
+        (click)="handleItemClick()"
+        tabindex="-1"
+      >
+        <span class="icon-and-text">
+          <mat-icon class="icon-margin">insert_emoticon</mat-icon>
+          Mi Componente 08
         </span>
       </mat-list-item>
     </div>
