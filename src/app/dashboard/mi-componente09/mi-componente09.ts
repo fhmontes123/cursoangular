@@ -20,6 +20,9 @@ export class MiComponente09 implements OnInit, OnDestroy {
       this.nombre = params.get('param_nombre') ?? '';
       this.edad = Number(params.get('param_edad'));
     });
+
+    console.log('**** OBTENER DATOS CON SNAPSHOT*****');
+    console.log('Datos obtenidos mediante snapshot => ', this._activatedRoute.snapshot.params);
   }
 
   ngOnDestroy(): void {
