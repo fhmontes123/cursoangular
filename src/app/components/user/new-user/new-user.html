@@ -9,6 +9,9 @@
         <mat-form-field appearance="outline">
           <mat-label>Nombres</mat-label>
           <input matInput placeholder="Ingrese sus nombres" type="text" formControlName="nombres" />
+          @if(nombresField.hasError('required')){
+          <mat-error>Por favor ingrese su nombre completo</mat-error>
+          }
         </mat-form-field>
 
         <mat-form-field appearance="outline">
@@ -19,6 +22,9 @@
             type="text"
             formControlName="apellidos"
           />
+          @if(apellidosField.hasError('required')){
+          <mat-error>Por favor ingrese sus apellidos</mat-error>
+          }
         </mat-form-field>
 
         <mat-form-field appearance="outline">

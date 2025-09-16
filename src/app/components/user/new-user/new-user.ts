@@ -28,6 +28,8 @@ export class NewUser {
     nombres: ['', Validators.required],
     apellidos: ['', Validators.required],
     correo: ['', [Validators.required, Validators.email]],
+    password: ['', Validators.required],
+    confirmPassword: ['', Validators.required],
   });
 
   clickRegister(): void {
@@ -40,5 +42,32 @@ export class NewUser {
     if (this.formGroup.valid) {
       console.log('Los datos del formulario son correctos.');
     }
+
+    console.log('Propiedad errors correo: ', this.formGroup.controls.correo.errors);
+    console.log(
+      'Funcion hasError(email) correo: ',
+      this.formGroup.controls.correo.hasError('email')
+    );
+  }
+
+  // METODOS GETTER
+  get nombresField(): FormControl<string> {
+    return this.formGroup.controls.nombres;
+  }
+
+  get apellidosField(): FormControl<string> {
+    return this.formGroup.controls.apellidos;
+  }
+
+  get correoField(): FormControl<string> {
+    return this.formGroup.controls.correo;
+  }
+
+  get passwordField(): FormControl<string> {
+    return this.formGroup.controls.password;
+  }
+
+  get confirmPasswordField(): FormControl<string> {
+    return this.formGroup.controls.confirmPassword;
   }
 }
