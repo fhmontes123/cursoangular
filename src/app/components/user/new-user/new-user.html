@@ -39,12 +39,30 @@
 
         <mat-form-field appearance="outline">
           <mat-label>Contraseña</mat-label>
-          <input matInput placeholder="Ingrese su contraseña" type="password" />
+          <input
+            matInput
+            placeholder="Ingrese su contraseña"
+            type="password"
+            formControlName="password"
+          />
+          @if(passwordField.hasError('required')){
+          <mat-error>Por favor ingrese una contraseña</mat-error>
+          } @if(passwordField.hasError('customPasswordValidator')){
+          <mat-error>
+            La contraseña debe tener al menos una mayuscula, minuscula, simbolo, numeros y minimo 8
+            caracteres
+          </mat-error>
+          }
         </mat-form-field>
 
         <mat-form-field appearance="outline">
           <mat-label>Repetir contraseña</mat-label>
-          <input matInput placeholder="Ingrese sus nombres" type="password" />
+          <input
+            matInput
+            placeholder="Ingrese sus nombres"
+            type="password"
+            formControlName="confirmPassword"
+          />
         </mat-form-field>
 
         <button mat-raised-button color="primary" (click)="clickRegister()">Registrarse</button>
