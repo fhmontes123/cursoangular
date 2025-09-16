@@ -13,6 +13,11 @@ export const userRoutes: Routes = [
     title: 'Users',
   },
   {
+    path: 'new-user',
+    loadComponent: () => import('./new-user/new-user').then((c) => c.NewUser),
+    title: 'Nuevo Usuario',
+  },
+  {
     path: '**',
     pathMatch: 'full',
     redirectTo: 'users',

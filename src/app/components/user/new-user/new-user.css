@@ -1,0 +1,32 @@
+.register-container {
+  margin-top: 40px;
+}
+
+mat-card {
+  margin: 20px;
+  padding: 16px;
+}
+
+mat-card-title {
+  font-size: 20px;
+  font-weight: 600;
+  padding-bottom: 20px;
+}
+
+.register-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+mat-form-field {
+  width: 100%;
+  font-size: 14px;
+}
+
+button {
+  margin-top: 12px;
+  align-self: flex-end;
+  font-size: 14px;
+  padding: 4px 16px;
+}

@@ -200,4 +200,16 @@
 
     }
   </mat-nav-list>
+
+  <mat-list-item
+    routerLink="/dashboard/user/new-user"
+    routerLinkActive="activelink"
+    (click)="handleItemClick()"
+    tabindex="-1"
+  >
+    <span class="icon-and-text">
+      <mat-icon class="icon-margin">insert_emoticon</mat-icon>
+      Formulario Reactivo
+    </span>
+  </mat-list-item>
 </mat-nav-list>
