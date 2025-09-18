@@ -56,6 +56,11 @@ export const dashboardRoutes: Routes = [
           import('../components/practicas/practicas.routes').then((m) => m.practicasRoutes),
       },
       {
+        path: 'product',
+        loadChildren: () =>
+          import('../components/product/product.route').then((m) => m.productRoutes),
+      },
+      {
         path: '**',
         pathMatch: 'full',
         redirectTo: 'home',
