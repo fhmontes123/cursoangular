@@ -10,13 +10,23 @@ import { ChangeDetectionStrategy, ChangeDetectorRef, Component, signal } from '@
 export class MiComponente11 {
   // titulo = 'Espere tres segundos...';
   titulo = signal('Espere tres segundos...');
+  contador = signal(0);
 
   // constructor(private cdr: ChangeDetectorRef) {
   constructor() {
     setTimeout(() => {
+      // this.titulo = 'Curso de Angular';
       this.titulo.set('Curso de Angular');
       console.log('Se ha cambiado el valor del titulo');
       // cdr.markForCheck(); // << Forzar actualizar plantilla
     }, 3000);
+  }
+
+  incrementarConSet(): void {
+    this.contador.set(this.contador() + 1);
+  }
+
+  incrementarConUpdate(): void {
+    this.contador.update((valor) => valor + 1);
   }
 }
