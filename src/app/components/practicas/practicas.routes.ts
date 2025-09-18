@@ -8,6 +8,7 @@ import { MiComponente07 } from './mi-componente07/mi-componente07';
 import { MiComponente08 } from './mi-componente08/mi-componente08';
 import { MiComponente09 } from './mi-componente09/mi-componente09';
 import { MiComponente10 } from './mi-componente10/mi-componente10';
+import { MiComponente11 } from './mi-componente11/mi-componente11';
 
 export const practicasRoutes: Routes = [
   { path: 'saludo', component: Saludo },
@@ -27,6 +28,7 @@ export const practicasRoutes: Routes = [
   { path: 'micomponente08', component: MiComponente08 },
   { path: 'micomponente09/:param_nombre/:param_edad', component: MiComponente09 },
   { path: 'micomponente10', component: MiComponente10 },
+  { path: 'micomponente11', component: MiComponente11 },
   {
     path: '', // Ruta hija por defecto /dashboard
     redirectTo: 'saludo',
