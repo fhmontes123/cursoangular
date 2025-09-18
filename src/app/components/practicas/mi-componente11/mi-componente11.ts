@@ -1,4 +1,10 @@
-import { ChangeDetectionStrategy, ChangeDetectorRef, Component, signal } from '@angular/core';
+import {
+  ChangeDetectionStrategy,
+  ChangeDetectorRef,
+  Component,
+  computed,
+  signal,
+} from '@angular/core';
 
 @Component({
   selector: 'app-mi-componente11',
@@ -11,6 +17,9 @@ export class MiComponente11 {
   // titulo = 'Espere tres segundos...';
   titulo = signal('Espere tres segundos...');
   contador = signal(0);
+  multiplicarPorTres = computed(() => this.contador() * 3);
+  // effect()
+  // toSignal(observable)
 
   // constructor(private cdr: ChangeDetectorRef) {
   constructor() {
