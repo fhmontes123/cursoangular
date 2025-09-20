@@ -12,6 +12,11 @@ export const productRoutes: Routes = [
     title: 'Products',
   },
   {
+    path: 'products-async',
+    loadComponent: () => import('./products-async/products-async').then((c) => c.ProductsAsync),
+    title: 'Products Async',
+  },
+  {
     path: '**',
     pathMatch: 'full',
     redirectTo: 'products',

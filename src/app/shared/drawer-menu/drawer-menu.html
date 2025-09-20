@@ -237,4 +237,16 @@
       Productos
     </span>
   </mat-list-item>
+
+  <mat-list-item
+    routerLink="/dashboard/product/products-async"
+    routerLinkActive="activelink"
+    (click)="handleItemClick()"
+    tabindex="-1"
+  >
+    <span class="icon-and-text">
+      <mat-icon class="icon-margin">store</mat-icon>
+      Productos - PipeAsync
+    </span>
+  </mat-list-item>
 </mat-nav-list>

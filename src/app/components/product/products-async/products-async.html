@@ -1,0 +1,19 @@
+<div class="products-container">
+  <h1>Lista de Productos con PipeAsync</h1>
+  <div class="products">
+    @for(product of products | async; track product.id){
+    <mat-card class="card">
+      <mat-card-header>
+        <mat-card-title class="card-title">{{ product.title }}</mat-card-title>
+        <mat-card-subtitle>{{ product.category }}</mat-card-subtitle>
+      </mat-card-header>
+
+      <img mat-card-image class="card-image" [src]="product.image" alt="Image" />
+
+      <mat-card-content class="card-content">
+        <p>{{ product.description }}</p>
+      </mat-card-content>
+    </mat-card>
+    }
+  </div>
+</div>
