@@ -17,6 +17,11 @@ export const productRoutes: Routes = [
     title: 'Products Async',
   },
   {
+    path: 'products-signal',
+    loadComponent: () => import('./products-signal/products-signal').then((c) => c.ProductsSignal),
+    title: 'Products Signal',
+  },
+  {
     path: '**',
     pathMatch: 'full',
     redirectTo: 'products',
