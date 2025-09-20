@@ -22,6 +22,11 @@ export const productRoutes: Routes = [
     title: 'Products Signal',
   },
   {
+    path: 'products-crud',
+    loadComponent: () => import('./products-crud/products-crud').then((c) => c.ProductsCrud),
+    title: 'Products',
+  },
+  {
     path: '**',
     pathMatch: 'full',
     redirectTo: 'products',

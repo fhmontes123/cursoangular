@@ -261,4 +261,16 @@
       Productos - Signal
     </span>
   </mat-list-item>
+
+  <mat-list-item
+    routerLink="/dashboard/product/products-crud"
+    routerLinkActive="activelink"
+    (click)="handleItemClick()"
+    tabindex="-1"
+  >
+    <span class="icon-and-text">
+      <mat-icon class="icon-margin">store</mat-icon>
+      Productos - CRUD
+    </span>
+  </mat-list-item>
 </mat-nav-list>
